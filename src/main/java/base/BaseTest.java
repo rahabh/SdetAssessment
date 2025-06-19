@@ -50,7 +50,7 @@ public class BaseTest {
 		sparkReporter = new ExtentSparkReporter(System.getProperty ("user.dir") + File.separator+"reports"+File.separator+"NSEInidaAutomationExtentReport.html");
 		extent.attachReporter(sparkReporter);
 		sparkReporter.config().setTheme(Theme. DARK) ;
-		extent.setSystemInfo("HostName", "RHEL8");
+		extent.setSystemInfo("HostName", "Rahul Abhishek");
 		extent. setSystemInfo("UserName", "root");
 		sparkReporter.config().setDocumentTitle("Automation Report on NSE India");
 		sparkReporter.config().setReportName("NSE INDIA Automation Tests Results");

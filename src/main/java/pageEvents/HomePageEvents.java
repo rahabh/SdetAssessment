@@ -25,13 +25,14 @@ public class HomePageEvents extends BaseTest{
 	WebDriver driver;
 	
 	public void clickOnNiftyFifty() {
-		
+		log.info("Navigate to nifty 50 from nse india");
 		WebElement nifty50 = ele.getWebElement("XPATH", HomePageElements.niftyFifty);
 		nifty50.click();
 		CommonMethods.switchWindow();
 	}
 	
 	public void verifyTitle(String title) {
+		log.info("Title of the page found to be: " +CommonMethods.getTitle() );
 		Assert.assertEquals(CommonMethods.getTitle(), title);
 	}
 }

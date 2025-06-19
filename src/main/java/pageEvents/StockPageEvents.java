@@ -3,6 +3,8 @@ package pageEvents;
 import java.math.BigDecimal;
 import java.time.Duration;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,11 +20,12 @@ import utils.PageConstants;
 public class StockPageEvents {
 	
 	ElementFetch elementFetch = new ElementFetch();
+	Logger log = LogManager.getLogger(StockPageEvents.class);
 	WebDriver driver;
 	
 	public void verifyStockURLUrl(String StockName) {
+		log.info("The current url of the page stock '"+StockName+ "' is: "+CommonMethods.getCurrentUrl());
 		String currentNiftFiftyUrl = CommonMethods.getCurrentUrl();
-//		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 		Assert.assertEquals(currentNiftFiftyUrl, PageConstants.StockURL+StockName);
 	}
 	

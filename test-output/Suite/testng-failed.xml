@@ -4,6 +4,22 @@
   <listeners>
     <listener class-name="utils.SuiteListener"/>
   </listeners>
+  <test thread-count="5" name="ChromeTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tests.testcase1">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="afterTest"/>
+          <include name="beforeMethodMethod"/>
+          <include name="verifyTheValueofHighAndLowInLast52WeeksForRelianceCom"/>
+          <include name="mainBeforeTestMethod"/>
+          <include name="verifyTheValueofHighAndLowInLast52WeeksForStockTataMotors"/>
+          <include name="verifyTheValueofHighAndLowInLast52WeeksForAnyStocksOfNiftyFifty"/>
+        </methods>
+      </class> <!-- tests.testcase1 -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
   <test thread-count="5" name="FireFoxTest(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
@@ -20,4 +36,19 @@
       </class> <!-- tests.testcase1 -->
     </classes>
   </test> <!-- FireFoxTest(failed) -->
+  <test thread-count="5" name="EdgeTest(failed)">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="tests.testcase1">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="afterTest"/>
+          <include name="beforeMethodMethod"/>
+          <include name="mainBeforeTestMethod"/>
+          <include name="verifyTheValueofHighAndLowInLast52WeeksForStockTataMotors"/>
+          <include name="verifyTheValueofHighAndLowInLast52WeeksForAnyStocksOfNiftyFifty"/>
+        </methods>
+      </class> <!-- tests.testcase1 -->
+    </classes>
+  </test> <!-- EdgeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
