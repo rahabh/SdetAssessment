@@ -61,7 +61,6 @@ public class BaseTest {
 		logger.log(Status.INFO, message);//For extentTest HTML report
 		logger.info(message);
 		Reporter.log(message);
-
 	}
 
 	@BeforeMethod
